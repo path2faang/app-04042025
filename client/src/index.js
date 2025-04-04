@@ -1,11 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
-import './styles/tailwind.css';
+import { SonnerProvider } from 'sonner';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <SonnerProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </SonnerProvider>
 );
