@@ -2,4 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add custom styles here */
+:root {
+  --primary-color: #2299fb;
+  --secondary-color: #0085fb;
+  --background-color: #f8f9fa;
+  --heading-color: #131313;
+  --text-color: #2c2c2c;
+}
+
+/* Global styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
